@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "multi-agent-system"
+version = "0.1.0"
+description = "Multi-agent system with coordinator that routes requests to specialized sub-agents for weather or calculations"
+authors = ["Eugene <eugene@example.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+packages = [{include = "mas_system"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+google-adk = "^1.0.0"
+google-genai = "^1.9.0"
+pydantic = "^2.10.6"
+python-dotenv = "^1.0.1"
+requests = "^2.31.0"
+httpx = "^0.28.1"
+google-cloud-firestore = "^2.20.0"
+google-cloud-aiplatform = { version = "^1.93", extras = [
+    "adk",
+    "agent-engines",
+] }
+vertexai = "^1.46.0"
+google-cloud-storage = "^2.10.0"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+google-adk = { extras = ["eval"], version = "^1.0.0" }
+google-cloud-aiplatform = { version = "^1.93", extras = [
+    "adk",
+    "agent-engines",
+    "evaluation",
+] }
+pytest = "^8.3.5"
+black = "^25.1.0"
+pytest-asyncio = "^0.26.0"
+pandas = "^2.2.3"
+tabulate = "^0.9.0"
+
+[tool.poetry.group.deployment]
+optional = true
+
+[tool.poetry.group.deployment.dependencies]
+absl-py = "^2.2.1"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
