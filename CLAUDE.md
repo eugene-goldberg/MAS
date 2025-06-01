@@ -53,9 +53,10 @@ tools=[
 ```
 
 ### Important Discovery
-- Sub-agent tools must return dictionaries, not strings, when used with `AgentTool`
+- **CRITICAL ADK REQUIREMENT**: All tools must return dictionaries, not strings, when used with `AgentTool`
 - String-returning tools don't properly surface results through the coordinator
 - This was discovered when the calculator agent (now removed) failed to return results
+- This is a fundamental requirement of the ADK framework - always return dict
 
 ## Academic Research Agents
 
@@ -159,10 +160,11 @@ MAS/
 
 ## Best Practices Learned
 
-1. **Tool Return Types**: When using `AgentTool`, ensure sub-agent tools return dictionaries
+1. **Tool Return Types**: **CRITICAL** - When using ADK, ALL tools MUST return dictionaries, never strings or other types
 2. **Prompting**: Be explicit about when to use each sub-agent in coordinator instructions
 3. **Academic Agents**: Specialized agents may require specific workflows and contexts
 4. **Testing**: Always test through the coordinator, not just individual agents
+5. **ADK Rule**: Every tool function must return a dict with at least {"status": "...", "data": {...}}
 
 ## Environment Variables Required
 
