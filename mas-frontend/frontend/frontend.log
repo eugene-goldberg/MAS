@@ -1062,3 +1062,19 @@ TS18046: 'stats' is of type 'unknown'.
     55 |               )}ms
     56 |             </Typography>
 
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.

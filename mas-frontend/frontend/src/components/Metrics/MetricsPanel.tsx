@@ -3,9 +3,15 @@ import { Box, Typography, Grid, Paper } from '@mui/material';
 import { MetricCard } from './MetricCard';
 import { LoadingSpinner } from '../Common/LoadingSpinner';
 
+interface AgentStats {
+  avgResponseTime: number;
+  totalCalls: number;
+  toolUsage: Record<string, number>;
+}
+
 export const MetricsPanel: React.FC = () => {
   // Initialize with empty metrics
-  const agentStats = {};
+  const agentStats: Record<string, AgentStats> = {};
   const isLoading = false;
   
   if (isLoading) {

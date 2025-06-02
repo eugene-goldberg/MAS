@@ -20,8 +20,7 @@ from google.adk.tools.agent_tool import AgentTool
 from . import prompt
 from .sub_agents.weather_agent import weather_agent
 from .sub_agents.greeter_agent import greeter_agent
-from .sub_agents.academic_newresearch import academic_newresearch_agent
-from .sub_agents.academic_websearch import academic_websearch_agent
+from .sub_agents.academic_wrapper import academic_websearch_wrapper, academic_newresearch_wrapper
 from .sub_agents.rag_agent import rag_agent
 
 MODEL = "gemini-2.0-flash-001"
@@ -42,8 +41,8 @@ mas_coordinator = LlmAgent(
     tools=[
         AgentTool(agent=weather_agent),
         AgentTool(agent=greeter_agent),
-        AgentTool(agent=academic_newresearch_agent),
-        AgentTool(agent=academic_websearch_agent),
+        AgentTool(agent=academic_newresearch_wrapper),
+        AgentTool(agent=academic_websearch_wrapper),
         AgentTool(agent=rag_agent),
     ],
 )

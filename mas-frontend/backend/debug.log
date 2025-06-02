@@ -81,3 +81,156 @@ Response length: 196
 Processing message: Suggest future research directions
 Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
 Response length: 285
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: OK. I've created a new corpus called 'seminal_papers'. It is now the current corpus.
+...
+Response length: 85
+Processing message: Please add this seminal paper to the seminal_papers corpus:
+
+
+Title: Attention Is All You Need
+Authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Lukasz Kaiser, Illia Polosukhin
+Year: 2017
+
+Abstract:
+The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely. Experiments on two machine translation tasks show these models to be superior in quality while being more parallelizable and requiring significantly less time to train. Our model achieves 28.4 BLEU on the WMT 2014 English-to-German translation task, improving over the existing best results, including ensembles, by over 2 BLEU. On the WMT 2014 English-to-French translation task, our model establishes a new single-model state-of-the-art BLEU score of 41.8 after training for 3.5 days on eight GPUs, a small fraction of the training costs of the best models from the literature. We show that the Transformer generalizes well to other tasks by applying it successfully to English constituency parsing both with large and limited training data.
+
+Key Contributions:
+1. Introduced the Transformer architecture based solely on attention mechanisms
+2. Eliminated the need for recurrence and convolutions in sequence transduction
+3. Achieved state-of-the-art results on machine translation benchmarks
+4. Demonstrated superior parallelizability and training efficiency
+5. Showed generalization to other NLP tasks beyond translation
+
+This paper revolutionized natural language processing and became the foundation for models like BERT, GPT, and subsequent large language models.
+
+Got response from MAS: I need a path to the document to add it to the corpus. Can you provide a local file path or a GCS pa...
+Response length: 146
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I searched the seminal_papers corpus for information about the Transformer architecture, but I didn'...
+Response length: 196
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: OK. The corpus 'seminal_papers' already exists. I'll set it as the current corpus. You can now add d...
+Response length: 128
+Processing message: Please add the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/tests/transformer_paper.txt to the seminal_papers corpus
+Got response from MAS: OK. I've added the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-fronten...
+Response length: 160
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I found one relevant document in the seminal_papers corpus. It's the "Attention Is All You Need" pap...
+Response length: 219
+Processing message: Hello!
+Got response from MAS: Hello there! 👋 Welcome! How can I help you today? 😊
+...
+Response length: 52
+Processing message: What's the weather in San Francisco?
+Got response from MAS: I will check the weather information for you.
+The current weather in San Francisco, California, Unit...
+Response length: 258
+Processing message: Can you list the available corpora?
+Got response from MAS: OK. I found the following corpora: mas-rag-corpus, test_corpus_1748813704, test_corpus, test_corpus2...
+Response length: 198
+Processing message: I need to research papers that cite the Transformer architecture paper 'Attention Is All You Need' by Vaswani et al. Can you search for recent papers that build upon this seminal work?
+Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
+Response length: 285
+Processing message: Based on the Transformer architecture from 'Attention Is All You Need', what are some promising future research directions in this area? Consider recent developments in large language models.
+Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
+Response length: 285
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: OK. The corpus 'seminal_papers' already exists. You can now add documents to it or query it.
+...
+Response length: 93
+Processing message: Please add the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/tests/transformer_paper.txt to the seminal_papers corpus
+Got response from MAS: OK. I've added the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-fronten...
+Response length: 160
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I found two relevant results from the `seminal_papers` corpus, both from the file `transformer_paper...
+Response length: 319
+Processing message: Hello!
+Got response from MAS: Hello there! Welcome! 😊 How can I help you today?
+...
+Response length: 50
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: OK. The corpus 'seminal_papers' already exists. I've set it as the current corpus. You can now add r...
+Response length: 134
+Processing message: Please add the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/tests/transformer_paper.txt to the seminal_papers corpus
+Got response from MAS: OK. I've added the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-fronten...
+Response length: 160
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I found 3 relevant results in the `seminal_papers` corpus. All three results are from the file `tran...
+Response length: 559
+Processing message: Hello!
+Got response from MAS: Hello there! 👋 Welcome! It's great to have you here. How can I assist you today?
+...
+Response length: 81
+Processing message: What's the weather in New York?
+Got response from MAS: I will check the weather information for you.
+The current weather in New York, New York, United Stat...
+Response length: 251
+Processing message: Can you search the seminal_papers corpus and tell me about the Transformer paper by Vaswani et al?
+Got response from MAS: I have queried the `seminal_papers` corpus for the "Transformer paper by Vaswani et al".
+
+Here's wha...
+Response length: 599
+Processing message: Now that we have the Transformer paper from the corpus, can you search for recent papers that cite and build upon this work? Focus on papers about large language models.
+Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
+Response length: 285
+Processing message: Given the Transformer architecture from the seminal_papers corpus and its impact on NLP, what are promising future research directions? Consider efficiency, multimodality, and reasoning capabilities.
+Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
+Response length: 285
+Processing message: Using the Transformer paper from seminal_papers corpus as the seminal work, analyze recent developments in transformer-based models and suggest research gaps.
+Got response from MAS: The academic research agents in this system are designed for a specific workflow involving seminal p...
+Response length: 285
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: The corpus 'seminal_papers' already exists. You can now add documents to it or query it.
+...
+Response length: 89
+Processing message: Please add the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/tests/transformer_paper.txt to the seminal_papers corpus
+Got response from MAS: OK. I've added the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-fronten...
+Response length: 160
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I have searched the `seminal_papers` corpus for information about the Transformer architecture. The ...
+Response length: 424
+Processing message: Hello!
+Got response from MAS: Hello there! Welcome! I hope you're having a great day. How can I assist you today? 😊
+...
+Response length: 86
+Processing message: What's the weather in New York?
+Got response from MAS: I will check the weather information for you.
+The current weather in New York, New York, United Stat...
+Response length: 251
+Processing message: Can you search the seminal_papers corpus and tell me about the Transformer paper by Vaswani et al?
+Got response from MAS: The Transformer paper, titled "Attention Is All You Need," was authored by Ashish Vaswani et al. in ...
+Response length: 591
+Processing message: Now that we have the Transformer paper from the corpus, can you search for recent papers that cite and build upon this work? Focus on papers about large language models.
+Processing message: Given the Transformer architecture from the seminal_papers corpus and its impact on NLP, what are promising future research directions? Consider efficiency, multimodality, and reasoning capabilities.
+Processing message: Using the Transformer paper from seminal_papers corpus as the seminal work, analyze recent developments in transformer-based models and suggest research gaps.
+Processing message: Please create a new corpus called 'seminal_papers' for storing important research papers
+Got response from MAS: The corpus 'seminal_papers' already exists. You can now add documents to it or query it.
+...
+Response length: 89
+Processing message: Please add the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/tests/transformer_paper.txt to the seminal_papers corpus
+Got response from MAS: OK. I've added the document at /Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-fronten...
+Response length: 160
+Processing message: Can you search the seminal_papers corpus for information about the Transformer architecture?
+Got response from MAS: I found 5 relevant results in the seminal_papers corpus for your query about the Transformer archite...
+Response length: 517
+Processing message: Hello!
+Got response from MAS: Hello there! Welcome! 😊 How can I help you today?
+...
+Response length: 50
+Processing message: What's the weather in New York?
+Got response from MAS: I will check the weather information for you.
+The current weather in New York, New York, United Stat...
+Response length: 251
+Processing message: Can you search the seminal_papers corpus and tell me about the Transformer paper by Vaswani et al?
+Got response from MAS: The Transformer paper, titled "Attention Is All You Need," was authored by Ashish Vaswani et al. in ...
+Response length: 567
+Processing message: Now that we have the Transformer paper from the corpus, can you search for recent papers that cite and build upon this work? Focus on papers about large language models.
+Got response from MAS: Okay, I will find recent papers that cite the "Attention Is All You Need" paper by Vaswani et al., w...
+Response length: 3755
+Processing message: Given the Transformer architecture from the seminal_papers corpus and its impact on NLP, what are promising future research directions? Consider efficiency, multimodality, and reasoning capabilities.
+Got response from MAS: Okay, given the Transformer architecture as introduced in "Attention Is All You Need" and its subseq...
+Response length: 5050
+Processing message: Using the Transformer paper from seminal_papers corpus as the seminal work, analyze recent developments in transformer-based models and suggest research gaps.
+Got response from MAS: Okay, you're asking me to suggest future research directions based on the "Attention is All You Need...
+Response length: 4082
