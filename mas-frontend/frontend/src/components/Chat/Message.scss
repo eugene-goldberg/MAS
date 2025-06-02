@@ -1,0 +1,72 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.message {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+  
+  &.user {
+    flex-direction: row-reverse;
+    
+    .message-content {
+      background-color: $primary-color;
+      color: white;
+      
+      .message-role,
+      .message-time {
+        color: rgba(255, 255, 255, 0.8);
+      }
+    }
+  }
+  
+  &.assistant {
+    .message-content {
+      background-color: white;
+      border: 1px solid $border-color;
+    }
+  }
+  
+  .message-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $background-light;
+    @include flex-center;
+    
+    svg {
+      font-size: 20px;
+      color: $text-secondary;
+    }
+  }
+  
+  .message-content {
+    max-width: 70%;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius;
+    
+    .message-header {
+      @include flex-between;
+      margin-bottom: $spacing-xs;
+      
+      .message-role {
+        font-weight: 500;
+      }
+      
+      .message-time {
+        color: $text-secondary;
+      }
+    }
+    
+    .message-text {
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+    
+    .message-metadata {
+      margin-top: $spacing-sm;
+      display: flex;
+      gap: $spacing-xs;
+    }
+  }
+}

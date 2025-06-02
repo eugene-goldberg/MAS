@@ -1,0 +1,974 @@
+INFO:     Will watch for changes in these directories: ['/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [75325] using WatchFiles
+INFO:     Started server process [75334]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:61578 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/sessions/094840e4-3f94-43e5-8eb5-267e232c4a0a HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61601 - "GET /api/sessions/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:61601 - "GET /api/chat/history/094840e4-3f94-43e5-8eb5-267e232c4a0a?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+Error in performance test: MAS client not connected
+INFO:     127.0.0.1:61601 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61601 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61603 - "WebSocket /ws/chat/094840e4-3f94-43e5-8eb5-267e232c4a0a" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/api/dependencies.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75334]
+INFO:     Started server process [75582]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75582]
+INFO:     Started server process [75686]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/chat.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [75686]
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 116, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 125, in _main
+    prepare(preparation_data)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 234, in prepare
+    _fixup_main_from_name(data['init_main_from_name'])
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/multiprocessing/spawn.py", line 258, in _fixup_main_from_name
+    main_content = runpy.run_module(mod_name,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 210, in run_module
+    return _run_module_code(code, init_globals, run_name, mod_spec)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 97, in _run_module_code
+    _run_code(code, mod_globals, init_globals,
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/app/main.py", line 7, in <module>
+    from app.api.routes import chat, agents, sessions, websocket, test
+  File "/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/app/api/routes/__init__.py", line 3, in <module>
+    from . import chat
+  File "/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/app/api/routes/chat.py", line 12, in <module>
+    mas_service: MASService = Depends(),
+NameError: name 'MASService' is not defined
+WARNING:  WatchFiles detected changes in 'app/api/routes/chat.py'. Reloading...
+INFO:     Started server process [76368]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/chat.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76368]
+INFO:     Started server process [76446]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/agents.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76446]
+INFO:     Started server process [76590]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/sessions.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76590]
+INFO:     Started server process [76738]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76738]
+INFO:     Started server process [76877]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/websocket.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76877]
+INFO:     Started server process [76926]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [76926]
+INFO:     Started server process [77072]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/api/routes/test.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77072]
+INFO:     Started server process [77216]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:62281 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/sessions/137d681d-14a9-4845-a232-2babb6ad94e8 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/sessions/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:62281 - "GET /api/chat/history/137d681d-14a9-4845-a232-2babb6ad94e8?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+Error in performance test: 'LlmAgent' object has no attribute 'send'
+INFO:     127.0.0.1:62281 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62281 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62283 - "WebSocket /ws/chat/137d681d-14a9-4845-a232-2babb6ad94e8" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [77216]
+INFO:     Started server process [78799]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/mas_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78799]
+INFO:     Started server process [78864]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/tracking.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [78864]
+INFO:     Started server process [79026]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:62774 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/sessions/a94243e9-f5a4-4a89-b2d3-3ad725080971 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/sessions/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:62774 - "GET /api/chat/history/a94243e9-f5a4-4a89-b2d3-3ad725080971?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+Error in performance test: object async_generator can't be used in 'await' expression
+INFO:     127.0.0.1:62774 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62774 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62776 - "WebSocket /ws/chat/a94243e9-f5a4-4a89-b2d3-3ad725080971" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79026]
+INFO:     Started server process [79406]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/tracking.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79406]
+INFO:     Started server process [79486]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/tracking.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79486]
+INFO:     Started server process [79588]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/mas_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79588]
+INFO:     Started server process [79697]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/tracking.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79697]
+INFO:     Started server process [79851]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:62990 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/sessions/65d44f4c-0061-4de1-bb07-12921995800f HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/sessions/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:62990 - "GET /api/chat/history/65d44f4c-0061-4de1-bb07-12921995800f?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+Error in performance test: No module named 'google.adk.agents.runtime'
+INFO:     127.0.0.1:62990 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62990 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62992 - "WebSocket /ws/chat/65d44f4c-0061-4de1-bb07-12921995800f" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [79851]
+INFO:     Started server process [80328]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/mas_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80328]
+INFO:     Started server process [80369]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:63111 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/sessions/c316c2e3-ab7c-4352-bf0f-dddfd79d0495 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/sessions/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63111 - "GET /api/chat/history/c316c2e3-ab7c-4352-bf0f-dddfd79d0495?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='Hello!', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='Hello!', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'Hello!'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='Hello!', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value="What's the weather in Paris?", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value="What's the weather in Paris?", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': "What's the weather in Paris?"}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value="What's the weather in Paris?", input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='List my document collections', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='List my document collections', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+Error in performance test: 5 validation errors for InvocationContext
+session_service
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+invocation_id
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+agent
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+session
+  Field required [type=missing, input_value={'input': 'List my document collections'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.5/v/missing
+input
+  Extra inputs are not permitted [type=extra_forbidden, input_value='List my document collections', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.5/v/extra_forbidden
+INFO:     127.0.0.1:63111 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63113 - "WebSocket /ws/chat/c316c2e3-ab7c-4352-bf0f-dddfd79d0495" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [80369]
+INFO:     Started server process [81615]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/services/mas_service.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81615]
+INFO:     Started server process [81734]
+INFO:     Waiting for application startup.
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:63492 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/sessions/5aa16bda-a49d-4050-ab29-18cb4b25db85 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63492 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63492 - "GET /api/chat/history/5aa16bda-a49d-4050-ab29-18cb4b25db85?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63492 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63492 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63492 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63492 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63494 - "WebSocket /ws/chat/5aa16bda-a49d-4050-ab29-18cb4b25db85" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [81734]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [82342]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82342]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [82436]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:63638 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/sessions/63cee4dc-ab74-4e13-8623-a89b5deb9e6b HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63638 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63638 - "GET /api/chat/history/63cee4dc-ab74-4e13-8623-a89b5deb9e6b?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63638 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63638 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63638 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63638 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63638 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63640 - "WebSocket /ws/chat/63cee4dc-ab74-4e13-8623-a89b5deb9e6b" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82436]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [82650]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:63720 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/sessions/41814567-b3b8-438d-8e83-9c7d242bdbcb HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63720 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:63720 - "GET /api/chat/history/41814567-b3b8-438d-8e83-9c7d242bdbcb?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63720 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63720 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63720 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:63720 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [82650]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [83363]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [83363]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [84288]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:64033 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/sessions/b6918280-cafe-48e7-9a1c-9fa92ce2a25e HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64033 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64033 - "GET /api/chat/history/b6918280-cafe-48e7-9a1c-9fa92ce2a25e?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64033 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64033 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64033 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64033 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64033 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64035 - "WebSocket /ws/chat/b6918280-cafe-48e7-9a1c-9fa92ce2a25e" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'test_mas_direct.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84288]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [84852]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [84852]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [85241]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:64296 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/sessions/6ca11701-feea-4d40-a314-3c1ca971b7f6 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64296 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64296 - "GET /api/chat/history/6ca11701-feea-4d40-a314-3c1ca971b7f6?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64296 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64296 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64296 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64296 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64298 - "WebSocket /ws/chat/6ca11701-feea-4d40-a314-3c1ca971b7f6" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [85241]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [85631]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:64413 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/sessions/900ab51b-2db5-46b6-9785-5bb9e9c37dc4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+INFO:     127.0.0.1:64413 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64413 - "GET /api/chat/history/900ab51b-2db5-46b6-9785-5bb9e9c37dc4?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64413 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+INFO:     127.0.0.1:64413 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+INFO:     127.0.0.1:64413 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+Error in performance test: __init__() got an unexpected keyword argument 'api_client'
+INFO:     127.0.0.1:64413 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: __init__() got an unexpected keyword argument 'api_client'
+INFO:     127.0.0.1:64413 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64415 - "WebSocket /ws/chat/900ab51b-2db5-46b6-9785-5bb9e9c37dc4" [accepted]
+INFO:     connection open
+INFO:     connection closed
+WARNING:  WatchFiles detected changes in 'app/core/mas_client.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [85631]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [85813]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'app/main.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [85813]
+/Users/eugene/dev/ai/google/adk-samples/python/agents/MAS/mas-frontend/backend/venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:     Started server process [86023]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Starting MAS Frontend API...
+Successfully connected to MAS system
+INFO:     127.0.0.1:64586 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /test HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/agents/info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/agents/metrics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/agents/tools HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "POST /api/sessions/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/sessions/a004e677-854a-4b7e-bc52-b11f0728fbaa HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/sessions/active HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64586 - "POST /api/chat/send HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:64586 - "GET /api/chat/history/a004e677-854a-4b7e-bc52-b11f0728fbaa?limit=10 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "GET /api/test/scenarios HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64586 - "POST /api/test/validate-tools HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64586 - "POST /api/test/run/greeter HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64586 - "POST /api/test/run/weather HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+Error in performance test: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64586 - "POST /api/test/performance-test?iterations=3 HTTP/1.1" 200 OK
+Error sending message to MAS: Missing key inputs argument! To use the Google AI API, provide (`api_key`) arguments. To use the Google Cloud API, provide (`vertexai`, `project` & `location`) arguments.
+INFO:     127.0.0.1:64586 - "GET /api/test/health-check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64588 - "WebSocket /ws/chat/a004e677-854a-4b7e-bc52-b11f0728fbaa" [accepted]
+INFO:     connection open
+INFO:     connection closed

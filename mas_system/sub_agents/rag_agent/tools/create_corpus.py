@@ -14,13 +14,14 @@
 
 """Create a new Vertex AI RAG corpus."""
 
+from typing import Optional
 from google.adk.tools import ToolContext
 from vertexai.preview import rag
 from ..config import DEFAULT_EMBEDDING_MODEL
 from ..utils import sanitize_corpus_name, check_corpus_exists
 
 
-def create_corpus(corpus_name: str, description: str = None, tool_context: ToolContext = None) -> dict:
+def create_corpus(corpus_name: str, description: Optional[str] = None, tool_context: ToolContext = None) -> dict:
     """
     Create a new Vertex AI RAG corpus with the specified name.
     

@@ -1,0 +1,20 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.agent-response-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  
+  .panel-header {
+    padding: $spacing-md;
+    border-bottom: 1px solid $border-color;
+    @include flex-between;
+  }
+  
+  .agents-list {
+    padding: $spacing-md;
+    overflow-y: auto;
+    @include custom-scrollbar;
+  }
+}

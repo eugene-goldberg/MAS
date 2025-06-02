@@ -1,6 +1,8 @@
 """Tools to make academic agents functional within MAS."""
 
-def format_paper_for_websearch(paper_title: str, paper_authors: str = None, paper_year: str = None) -> dict:
+from typing import Optional
+
+def format_paper_for_websearch(paper_title: str, paper_authors: Optional[str] = None, paper_year: Optional[str] = None) -> dict:
     """
     Format paper information for the academic websearch agent.
     

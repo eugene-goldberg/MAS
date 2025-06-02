@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebSocket Test</title>
+</head>
+<body>
+    <h1>WebSocket Connection Test</h1>
+    <div id="status">Connecting...</div>
+    <div id="messages"></div>
+    
+    <script>
+        const sessionId = 'test-html-' + Date.now();
+        const wsUrl = `ws://localhost:8000/ws/chat/${sessionId}`;
+        
+        console.log('Connecting to:', wsUrl);
+        const ws = new WebSocket(wsUrl);
+        
+        const updateStatus = (text, color = 'black') => {
+            const status = document.getElementById('status');
+            status.textContent = text;
+            status.style.color = color;
+        };
+        
+        const addMessage = (text) => {
+            const messages = document.getElementById('messages');
+            const div = document.createElement('div');
+            div.textContent = new Date().toISOString() + ': ' + text;
+            messages.appendChild(div);
+        };
+        
+        ws.onopen = () => {
+            console.log('WebSocket connected');
+            updateStatus('Connected', 'green');
+            addMessage('WebSocket opened');
+            console.log('WebSocket readyState:', ws.readyState);
+        };
+        
+        ws.onmessage = (event) => {
+            console.log('Message received:', event.data);
+            addMessage('Received: ' + event.data);
+            
+            try {
+                const data = JSON.parse(event.data);
+                if (data.type === 'connection_established') {
+                    addMessage('Connection established with session: ' + data.session_id);
+                } else if (data.type === 'heartbeat') {
+                    ws.send(JSON.stringify({ type: 'pong' }));
+                    addMessage('Heartbeat received, sent pong');
+                }
+            } catch (e) {
+                console.error('Error parsing message:', e);
+            }
+        };
+        
+        ws.onerror = (error) => {
+            console.error('WebSocket error:', error);
+            updateStatus('Error', 'red');
+            addMessage('Error: ' + error);
+        };
+        
+        ws.onclose = (event) => {
+            console.log('WebSocket closed:', event.code, event.reason);
+            updateStatus(`Closed (${event.code})`, 'orange');
+            addMessage(`Connection closed: ${event.code} - ${event.reason}`);
+        };
+        
+        // Keep connection info visible
+        setInterval(() => {
+            if (ws.readyState !== undefined) {
+                console.log('Current readyState:', ws.readyState);
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

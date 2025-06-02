@@ -1,0 +1,1064 @@
+
+> mas-testing-frontend@1.0.0 start
+> react-scripts start
+
+(node:99168) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+(node:99168) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+Starting the development server...
+
+Compiled successfully!
+
+You can now view mas-testing-frontend in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://10.0.0.80:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+ERROR in src/components/Chat/ChatInterface.tsx:27:16
+TS2554: Expected 0 arguments, but got 1.
+    25 |     
+    26 |     // Add user message
+  > 27 |     addMessage({
+       |                ^
+  > 28 |       id: Date.now().toString(),
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 29 |       role: 'user',
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 30 |       content,
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 31 |       timestamp: new Date()
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 32 |     });
+       | ^^^^^^
+    33 |     
+    34 |     // Send to backend
+    35 |     await sendMessage({
+
+ERROR in src/components/Chat/ChatInterface.tsx:35:23
+TS2554: Expected 0 arguments, but got 1.
+    33 |     
+    34 |     // Send to backend
+  > 35 |     await sendMessage({
+       |                       ^
+  > 36 |       type: 'chat_message',
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 37 |       content
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 38 |     });
+       | ^^^^^^
+    39 |   };
+    40 |   
+    41 |   return (
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/components/Chat/ChatInterface.tsx:35:23
+TS2554: Expected 0 arguments, but got 1.
+    33 |     
+    34 |     // Send to backend
+  > 35 |     await sendMessage({
+       |                       ^
+  > 36 |       type: 'chat_message',
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 37 |       content
+       | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  > 38 |     });
+       | ^^^^^^
+    39 |   };
+    40 |   
+    41 |   return (
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/components/Chat/ChatInterface.tsx:49:22
+TS2322: Type 'Message[]' is not assignable to type 'ChatMessage[]'.
+  Type 'Message' is not assignable to type 'ChatMessage'.
+    Types of property 'role' are incompatible.
+      Type '"user" | "assistant" | "system"' is not assignable to type '"user" | "assistant"'.
+        Type '"system"' is not assignable to type '"user" | "assistant"'.
+    47 |       
+    48 |       <Box className="chat-messages">
+  > 49 |         <MessageList messages={messages} isLoading={isLoading} />
+       |                      ^^^^^^^^
+    50 |         <div ref={messagesEndRef} />
+    51 |       </Box>
+    52 |       
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+ERROR in src/hooks/useChat.ts:47:9
+TS2322: Type '"system"' is not assignable to type '"user" | "assistant"'.
+    45 |       const errorMessage: Message = {
+    46 |         id: crypto.randomUUID(),
+  > 47 |         role: 'system',
+       |         ^^^^
+    48 |         content: `Error: ${data.error}`,
+    49 |         timestamp: new Date()
+    50 |       };
+
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used             @typescript-eslint/no-unused-vars
+  Line 7:10:  'useWebSocketContext' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used             @typescript-eslint/no-unused-vars
+  Line 7:10:  'useWebSocketContext' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/components/Chat/ChatInterface.tsx:12:40
+TS2552: Cannot find name 'useWebSocket'. Did you mean 'WebSocket'?
+    10 | export const ChatInterface: React.FC = () => {
+    11 |   const { messages, addMessage, isLoading } = useChat();
+  > 12 |   const { sendMessage, isConnected } = useWebSocket();
+       |                                        ^^^^^^^^^^^^
+    13 |   const messagesEndRef = useRef<HTMLDivElement>(null);
+    14 |   
+    15 |   const scrollToBottom = () => {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useChat.ts
+  Line 2:10:  'useWebSocketContext' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useChat.ts
+  Line 2:10:  'useWebSocketContext' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useChat.ts:19:31
+TS2552: Cannot find name 'useWebSocket'. Did you mean 'WebSocket'?
+    17 |   );
+    18 |   
+  > 19 |   const { registerHandler } = useWebSocket();
+       |                               ^^^^^^^^^^^^
+    20 |   
+    21 |   // Register WebSocket message handlers
+    22 |   useEffect(() => {
+
+ERROR in src/hooks/useChat.ts:24:72
+TS7006: Parameter 'data' implicitly has an 'any' type.
+    22 |   useEffect(() => {
+    23 |     // Handle agent responses
+  > 24 |     const unregisterAgentResponse = registerHandler('agent_response', (data) => {
+       |                                                                        ^^^^
+    25 |       console.log('Received agent response:', data);
+    26 |       
+    27 |       // Add assistant message
+
+ERROR in src/hooks/useChat.ts:41:55
+TS7006: Parameter 'data' implicitly has an 'any' type.
+    39 |     
+    40 |     // Handle errors
+  > 41 |     const unregisterError = registerHandler('error', (data) => {
+       |                                                       ^^^^
+    42 |       console.error('Chat error:', data);
+    43 |       
+    44 |       // Add error message as assistant message with error formatting
+
+ERROR in src/hooks/useChat.ts:57:64
+TS7006: Parameter 'data' implicitly has an 'any' type.
+    55 |     
+    56 |     // Handle message acknowledgment
+  > 57 |     const unregisterAck = registerHandler('message_received', (data) => {
+       |                                                                ^^^^
+    58 |       console.log('Message acknowledged:', data.message_id);
+    59 |       setIsLoading(true);
+    60 |     });
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 1:17:  'useState' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 153:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 154:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 154:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 14:9:  'chatContext' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 14:9:  'chatContext' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useChat.ts:36:7
+TS2552: Cannot find name 'setMessages'. Did you mean 'postMessage'?
+    34 |       };
+    35 |       
+  > 36 |       setMessages(prev => [...prev, assistantMessage]);
+       |       ^^^^^^^^^^^
+    37 |       setIsLoading(false);
+    38 |     });
+    39 |     
+
+ERROR in src/hooks/useChat.ts:36:19
+TS7006: Parameter 'prev' implicitly has an 'any' type.
+    34 |       };
+    35 |       
+  > 36 |       setMessages(prev => [...prev, assistantMessage]);
+       |                   ^^^^
+    37 |       setIsLoading(false);
+    38 |     });
+    39 |     
+
+ERROR in src/hooks/useChat.ts:37:7
+TS2304: Cannot find name 'setIsLoading'.
+    35 |       
+    36 |       setMessages(prev => [...prev, assistantMessage]);
+  > 37 |       setIsLoading(false);
+       |       ^^^^^^^^^^^^
+    38 |     });
+    39 |     
+    40 |     // Handle errors
+
+ERROR in src/hooks/useChat.ts:52:7
+TS2552: Cannot find name 'setMessages'. Did you mean 'postMessage'?
+    50 |       };
+    51 |       
+  > 52 |       setMessages(prev => [...prev, errorMessage]);
+       |       ^^^^^^^^^^^
+    53 |       setIsLoading(false);
+    54 |     });
+    55 |     
+
+ERROR in src/hooks/useChat.ts:52:19
+TS7006: Parameter 'prev' implicitly has an 'any' type.
+    50 |       };
+    51 |       
+  > 52 |       setMessages(prev => [...prev, errorMessage]);
+       |                   ^^^^
+    53 |       setIsLoading(false);
+    54 |     });
+    55 |     
+
+ERROR in src/hooks/useChat.ts:53:7
+TS2304: Cannot find name 'setIsLoading'.
+    51 |       
+    52 |       setMessages(prev => [...prev, errorMessage]);
+  > 53 |       setIsLoading(false);
+       |       ^^^^^^^^^^^^
+    54 |     });
+    55 |     
+    56 |     // Handle message acknowledgment
+
+ERROR in src/hooks/useChat.ts:59:7
+TS2304: Cannot find name 'setIsLoading'.
+    57 |     const unregisterAck = registerHandler('message_received', (data) => {
+    58 |       console.log('Message acknowledged:', data.message_id);
+  > 59 |       setIsLoading(true);
+       |       ^^^^^^^^^^^^
+    60 |     });
+    61 |     
+    62 |     return () => {
+
+ERROR in src/hooks/useChat.ts:70:5
+TS2552: Cannot find name 'setMessages'. Did you mean 'postMessage'?
+    68 |   
+    69 |   const addMessage = useCallback((message: Message) => {
+  > 70 |     setMessages(prev => [...prev, message]);
+       |     ^^^^^^^^^^^
+    71 |   }, []);
+    72 |   
+    73 |   const clearMessages = useCallback(() => {
+
+ERROR in src/hooks/useChat.ts:70:17
+TS7006: Parameter 'prev' implicitly has an 'any' type.
+    68 |   
+    69 |   const addMessage = useCallback((message: Message) => {
+  > 70 |     setMessages(prev => [...prev, message]);
+       |                 ^^^^
+    71 |   }, []);
+    72 |   
+    73 |   const clearMessages = useCallback(() => {
+
+ERROR in src/hooks/useChat.ts:74:5
+TS2552: Cannot find name 'setMessages'. Did you mean 'postMessage'?
+    72 |   
+    73 |   const clearMessages = useCallback(() => {
+  > 74 |     setMessages([]);
+       |     ^^^^^^^^^^^
+    75 |   }, []);
+    76 |   
+    77 |   return {
+
+ERROR in src/hooks/useChat.ts:78:5
+TS2552: Cannot find name 'messages'. Did you mean 'onmessage'?
+    76 |   
+    77 |   return {
+  > 78 |     messages,
+       |     ^^^^^^^^
+    79 |     addMessage,
+    80 |     isLoading,
+    81 |     clearMessages,
+
+ERROR in src/hooks/useChat.ts:80:5
+TS18004: No value exists in scope for the shorthand property 'isLoading'. Either declare one or provide an initializer.
+    78 |     messages,
+    79 |     addMessage,
+  > 80 |     isLoading,
+       |     ^^^^^^^^^
+    81 |     clearMessages,
+    82 |     sessionId
+    83 |   };
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 1:20:  'useCallback' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 5:11:  'Message' is defined but never used      @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 1:20:  'useCallback' is defined but never used  @typescript-eslint/no-unused-vars
+  Line 5:11:  'Message' is defined but never used      @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 161:6:  React Hook useEffect has missing dependencies: 'connect' and 'disconnect'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 167:6:  React Hook useEffect has a missing dependency: 'connect'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+src/hooks/useWebSocket.ts
+  Line 167:6:  React Hook useEffect has a missing dependency: 'connect'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 5:11:  'Message' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 8:10:  'useAgentTracking' is defined but never used  @typescript-eslint/no-unused-vars
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/components/Chat/ChatInterface.tsx
+  Line 8:10:  'useAgentTracking' is defined but never used  @typescript-eslint/no-unused-vars
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled successfully!
+webpack compiled successfully
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 62:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 65:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 65:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useWebSocket.ts:63:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    61 |             console.log('Message acknowledged:', data.message_id);
+    62 |             const handler = messageHandlers.current.get('message_received');
+  > 63 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    64 |           } else if (data.type === 'agent_response') {
+    65 |             // Forward to chat handler
+    66 |             console.log('Agent response received:', data);
+
+ERROR in src/hooks/useWebSocket.ts:71:15
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    69 |             if (handler) {
+    70 |               console.log('Calling agent_response handler');
+  > 71 |               handler(data);
+       |               ^^^^^^^
+    72 |             } else {
+    73 |               console.log('No agent_response handler registered!');
+    74 |             }
+
+ERROR in src/hooks/useWebSocket.ts:78:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    76 |             console.error('WebSocket error:', data.error);
+    77 |             const handler = messageHandlers.current.get('error');
+  > 78 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    79 |           } else if (data.type === 'heartbeat') {
+    80 |             // Respond to heartbeat
+    81 |             if (ws.current?.readyState === WebSocket.OPEN) {
+
+ERROR in src/hooks/useWebSocket.ts:150:39
+TS2345: Argument of type '(data: any) => void' is not assignable to parameter of type 'Set<(data: any) => void>'.
+    148 |   const registerHandler = useCallback((type: string, handler: (data: any) => void) => {
+    149 |     console.log(`[WebSocket] Registering handler for: ${type}`);
+  > 150 |     messageHandlers.current.set(type, handler);
+        |                                       ^^^^^^^
+    151 |     return () => {
+    152 |       console.log(`[WebSocket] Unregistering handler for: ${type}`);
+    153 |       messageHandlers.current.delete(type);
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useWebSocket.ts:63:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    61 |             console.log('Message acknowledged:', data.message_id);
+    62 |             const handler = messageHandlers.current.get('message_received');
+  > 63 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    64 |           } else if (data.type === 'agent_response') {
+    65 |             // Forward to chat handler
+    66 |             console.log('Agent response received:', data);
+
+ERROR in src/hooks/useWebSocket.ts:71:15
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    69 |             if (handler) {
+    70 |               console.log('Calling agent_response handler');
+  > 71 |               handler(data);
+       |               ^^^^^^^
+    72 |             } else {
+    73 |               console.log('No agent_response handler registered!');
+    74 |             }
+
+ERROR in src/hooks/useWebSocket.ts:78:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    76 |             console.error('WebSocket error:', data.error);
+    77 |             const handler = messageHandlers.current.get('error');
+  > 78 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    79 |           } else if (data.type === 'heartbeat') {
+    80 |             // Respond to heartbeat
+    81 |             if (ws.current?.readyState === WebSocket.OPEN) {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useWebSocket.ts:73:15
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    71 |             if (handler) {
+    72 |               console.log('Calling agent_response handler');
+  > 73 |               handler(data);
+       |               ^^^^^^^
+    74 |             } else {
+    75 |               console.log('No agent_response handler registered!');
+    76 |             }
+
+ERROR in src/hooks/useWebSocket.ts:80:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    78 |             console.error('WebSocket error:', data.error);
+    79 |             const handler = messageHandlers.current.get('error');
+  > 80 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    81 |           } else if (data.type === 'heartbeat') {
+    82 |             // Respond to heartbeat
+    83 |             if (ws.current?.readyState === WebSocket.OPEN) {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/hooks/useWebSocket.ts:80:26
+TS2349: This expression is not callable.
+  Type 'Set<(data: any) => void>' has no call signatures.
+    78 |             console.error('WebSocket error:', data.error);
+    79 |             const handler = messageHandlers.current.get('error');
+  > 80 |             if (handler) handler(data);
+       |                          ^^^^^^^
+    81 |           } else if (data.type === 'heartbeat') {
+    82 |             // Respond to heartbeat
+    83 |             if (ws.current?.readyState === WebSocket.OPEN) {
+
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+No issues found.
+Compiling...
+Compiled with warnings.
+
+[eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+Search for the keywords to learn more about each warning.
+To ignore, add // eslint-disable-next-line to the line before.
+
+WARNING in [eslint] 
+src/hooks/useChat.ts
+  Line 66:6:  React Hook useEffect has a missing dependency: 'isLoading'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+webpack compiled with 1 warning
+ERROR in src/components/Metrics/MetricsPanel.tsx:26:32
+TS18046: 'stats' is of type 'unknown'.
+    24 |             <MetricCard
+    25 |               agent={agent}
+  > 26 |               avgResponseTime={stats.avgResponseTime}
+       |                                ^^^^^
+    27 |               totalCalls={stats.totalCalls}
+    28 |               toolUsage={stats.toolUsage}
+    29 |             />
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:27:27
+TS18046: 'stats' is of type 'unknown'.
+    25 |               agent={agent}
+    26 |               avgResponseTime={stats.avgResponseTime}
+  > 27 |               totalCalls={stats.totalCalls}
+       |                           ^^^^^
+    28 |               toolUsage={stats.toolUsage}
+    29 |             />
+    30 |           </Grid>
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:28:26
+TS18046: 'stats' is of type 'unknown'.
+    26 |               avgResponseTime={stats.avgResponseTime}
+    27 |               totalCalls={stats.totalCalls}
+  > 28 |               toolUsage={stats.toolUsage}
+       |                          ^^^^^
+    29 |             />
+    30 |           </Grid>
+    31 |         ))}
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:44:15
+TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: { component: ElementType<any, keyof IntrinsicElements>; } & TypographyOwnProps & CommonProps & Omit<any, "border" | ... 112 more ... | "variantMapping">): Element | null', gave the following error.
+    Type 'unknown' is not assignable to type 'ReactNode'.
+  Overload 2 of 2, '(props: DefaultComponentProps<TypographyTypeMap<{}, "span">>): Element | null', gave the following error.
+    Type 'unknown' is not assignable to type 'ReactNode'.
+    42 |             </Typography>
+    43 |             <Typography variant="h6">
+  > 44 |               {Object.values(agentStats).reduce((sum, stats) => sum + stats.totalCalls, 0)}
+       |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    45 |             </Typography>
+    46 |           </Box>
+    47 |           <Box>
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:44:71
+TS18046: 'stats' is of type 'unknown'.
+    42 |             </Typography>
+    43 |             <Typography variant="h6">
+  > 44 |               {Object.values(agentStats).reduce((sum, stats) => sum + stats.totalCalls, 0)}
+       |                                                                       ^^^^^
+    45 |             </Typography>
+    46 |           </Box>
+    47 |           <Box>
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:53:17
+TS2571: Object is of type 'unknown'.
+    51 |             <Typography variant="h6">
+    52 |               {Math.round(
+  > 53 |                 Object.values(agentStats).reduce((sum, stats) => sum + stats.avgResponseTime, 0) / 
+       |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    54 |                 Object.keys(agentStats).length
+    55 |               )}ms
+    56 |             </Typography>
+
+ERROR in src/components/Metrics/MetricsPanel.tsx:53:72
+TS18046: 'stats' is of type 'unknown'.
+    51 |             <Typography variant="h6">
+    52 |               {Math.round(
+  > 53 |                 Object.values(agentStats).reduce((sum, stats) => sum + stats.avgResponseTime, 0) / 
+       |                                                                        ^^^^^
+    54 |                 Object.keys(agentStats).length
+    55 |               )}ms
+    56 |             </Typography>
+
