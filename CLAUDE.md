@@ -147,6 +147,47 @@ MAS/
 └── CLAUDE.md (this file)
 ```
 
+## Academic Agents Integration
+
+### Initial Problem
+The academic agents (academic_websearch and academic_newresearch) were failing with "Context variable not found: `seminal_paper`" errors when called through the MAS coordinator.
+
+### Root Cause
+- The academic agents were designed to use context variables (e.g., `{seminal_paper}`) in their prompts
+- When wrapped with `AgentTool`, these context variables couldn't be passed through
+- The ADK's `AgentTool` wrapper doesn't support passing context variables to the wrapped agents
+
+### Solution: Wrapper Agents
+Created intermediate LlmAgent wrappers (`academic_wrapper.py`) that:
+1. **Handle natural language queries** without requiring context variables
+2. **Extract seminal paper information** from the user's query
+3. **Provide appropriate responses** for citation searches and research directions
+
+```python
+# Instead of direct AgentTool wrapping:
+AgentTool(agent=academic_websearch_agent)  # ❌ Requires context variables
+
+# Use wrapper agents:
+AgentTool(agent=academic_websearch_wrapper)  # ✅ Handles natural language
+```
+
+### Implementation Details
+1. **academic_websearch_wrapper**: 
+   - Extracts paper references from natural language queries
+   - Provides citation search results for papers mentioned
+   - Works with papers from RAG corpus
+
+2. **academic_newresearch_wrapper**:
+   - Suggests future research directions based on mentioned papers
+   - Considers efficiency, multimodality, and reasoning capabilities
+   - No longer requires pre-set context variables
+
+### Coordinator Prompt Updates
+Modified the coordinator prompt to:
+- Route academic queries to wrapper agents instead of deflecting them
+- Support queries that reference papers from the corpus
+- Provide clear instructions for when to use each academic agent
+
 ## Removed Components
 
 ### Calculator Agent

@@ -7,7 +7,10 @@ A sophisticated multi-agent system that uses an intelligent coordinator to route
 The system includes:
 1. **Coordinator Agent**: Analyzes user intent and routes requests
 2. **Weather Agent**: Provides real-time weather information from Open-Meteo API
-3. **Calculator Agent**: Performs mathematical operations and unit conversions
+3. **Greeter Agent**: Handles greetings, welcomes, and farewells
+4. **RAG Agent**: Manages document corpora and knowledge retrieval
+5. **Academic WebSearch Agent**: Searches for papers citing seminal works
+6. **Academic NewResearch Agent**: Suggests future research directions
 
 This architecture showcases how to build scalable multi-agent systems where specialized agents handle domain-specific tasks while a coordinator manages the overall interaction flow.
 
@@ -19,7 +22,7 @@ This architecture showcases how to build scalable multi-agent systems where spec
 | **Complexity** | Medium |
 | **Agent Type** | Multi Agent with Coordinator Pattern |
 | **Components** | LlmAgent (coordinator), Agent (sub-agents), External APIs |
-| **Sub-Agents** | Weather (Open-Meteo API), Calculator (Mathematical Operations) |
+| **Sub-Agents** | Weather, Greeter, RAG, Academic WebSearch, Academic NewResearch |
 
 ### System Architecture
 
@@ -31,13 +34,21 @@ Coordinator Agent (LlmAgent)
      └─ Routes to:
          ├─ Weather Agent
          │   ├─ Current Weather
-         │   ├─ Forecasts
-         │   └─ Cloud Functions
+         │   └─ Forecasts
          │
-         └─ Calculator Agent
-             ├─ Basic Math
-             ├─ Unit Conversions
-             └─ Complex Calculations
+         ├─ Greeter Agent
+         │   └─ Welcomes & Farewells
+         │
+         ├─ RAG Agent
+         │   ├─ Corpus Management
+         │   ├─ Document Upload
+         │   └─ Semantic Search
+         │
+         ├─ Academic WebSearch
+         │   └─ Citation Search
+         │
+         └─ Academic NewResearch
+             └─ Future Directions
 ```
 
 ## Sub-Agent Capabilities
@@ -49,11 +60,28 @@ Coordinator Agent (LlmAgent)
 - **Cloud Functions**: Lucky numbers and temperature adjustments
 - **Data Storage**: Automatic saving to Cloud Firestore
 
-### Calculator Agent
-- **Basic Operations**: Add, subtract, multiply, divide
-- **Advanced Math**: Powers, square roots, percentages
-- **Unit Conversions**: Temperature, distance, weight
-- **Practical Tools**: Tip calculator, BMI, compound interest
+### Greeter Agent
+- **Welcomes**: Friendly greetings and introductions
+- **Farewells**: Polite goodbyes and closing messages
+- **Context-Aware**: Responds appropriately to time of day
+
+### RAG Agent (Retrieval-Augmented Generation)
+- **Corpus Management**: Create and manage document collections
+- **Document Upload**: Add documents from local files or GCS
+- **Semantic Search**: Query documents using natural language
+- **Knowledge Retrieval**: Extract relevant information from corpora
+
+### Academic WebSearch Agent
+- **Citation Search**: Find papers citing a seminal work
+- **Recent Focus**: Prioritizes papers from last 2 years
+- **Comprehensive Results**: Returns paper details, authors, venues
+- **Natural Language**: Works with paper mentions in queries
+
+### Academic NewResearch Agent  
+- **Research Directions**: Suggests future research opportunities
+- **Gap Analysis**: Identifies unexplored areas
+- **Domain Coverage**: Efficiency, multimodality, reasoning
+- **Context-Aware**: Uses seminal paper context from queries
 
 ## Setup and Installation
 
@@ -164,6 +192,49 @@ Coordinator: Routes to Calculator Agent (handles conversions)
 Calculator Agent: "32°F equals 0°C"
 ```
 
+## Frontend Testing Interface
+
+A comprehensive FastAPI + React.js frontend is available for testing and visualizing the MAS system:
+
+### Features
+- **Real-time Chat**: WebSocket-based communication with the MAS coordinator
+- **Agent Activity Panel**: Visual display of agent interactions and tool usage
+- **Session Management**: Persistent conversation history
+- **No Mocks**: All interactions use real agent connections
+
+### Running the Frontend
+
+1. **Start Backend**:
+   ```bash
+   cd mas-frontend/backend
+   source venv/bin/activate
+   uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+   ```
+
+2. **Start Frontend**:
+   ```bash
+   cd mas-frontend/frontend
+   npm install
+   npm start
+   ```
+
+3. **Access Interface**: Open http://localhost:3000
+
+### Testing Academic Agents
+
+1. **Setup Corpus**:
+   ```bash
+   cd mas-frontend/tests
+   python setup_corpus_websocket.py
+   ```
+
+2. **Run UI Tests**:
+   ```bash
+   python test_ui_complete.py
+   ```
+
+For detailed implementation notes, see `mas-frontend/IMPLEMENTATION_NOTES.md`.
+
 ## Cloud Integration
 
 ### Firestore Integration
@@ -206,7 +277,17 @@ Optional integration for random number generation:
    - Check location names are spelled correctly
    - Try adding state/country for clarity
 
-3. **Deployment Issues**
+3. **Academic Agent Context Errors**
+   - Error: "Context variable not found: `seminal_paper`"
+   - Solution: Use the wrapper agents (academic_wrapper.py)
+   - These handle natural language without requiring context variables
+   - See CLAUDE.md for detailed explanation
+
+4. **Frontend TypeScript Errors**
+   - Ensure all component props have proper type definitions
+   - Check that empty objects have proper interfaces
+
+5. **Deployment Issues**
    - Verify all dependencies in `pyproject.toml`
    - Check Google Cloud permissions
    - Ensure storage bucket exists
