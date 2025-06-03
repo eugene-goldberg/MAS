@@ -27,28 +27,54 @@ This architecture showcases how to build scalable multi-agent systems where spec
 ### System Architecture
 
 ```
-User Request
-     ↓
-Coordinator Agent (LlmAgent)
-     ├─ Evaluates Intent
-     └─ Routes to:
-         ├─ Weather Agent
-         │   ├─ Current Weather
-         │   └─ Forecasts
-         │
-         ├─ Greeter Agent
-         │   └─ Welcomes & Farewells
-         │
-         ├─ RAG Agent
-         │   ├─ Corpus Management
-         │   ├─ Document Upload
-         │   └─ Semantic Search
-         │
-         ├─ Academic WebSearch
-         │   └─ Citation Search
-         │
-         └─ Academic NewResearch
-             └─ Future Directions
+┌─────────────────────────────────────────────────────────────┐
+│                    MAS Frontend Application                  │
+│  ┌─────────────────┐        ┌────────────────────────────┐ │
+│  │   React UI      │        │    FastAPI Backend         │ │
+│  │                 │        │                            │ │
+│  │ • Chat Interface│───────▶│ • WebSocket Handler       │ │
+│  │ • Agent Panel   │◀───────│ • Session Management      │ │
+│  │ • Metrics View  │        │ • MAS Client Integration  │ │
+│  └─────────────────┘        └────────────────────────────┘ │
+└─────────────────────────────────────────────────────────────┘
+                                    │
+                                    │ WebSocket
+                                    ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    MAS Coordinator Agent                     │
+│                      (LlmAgent)                              │
+│                                                              │
+│  • Analyzes user intent from natural language               │
+│  • Routes requests to appropriate sub-agents                 │
+│  • Returns consolidated responses                            │
+└─────────────────────────────────────────────────────────────┘
+                                    │
+                    ┌───────────────┴───────────────┐
+                    │        Routes to:              │
+                    ▼                                ▼
+         ┌──────────────────┐            ┌──────────────────┐
+         │  Weather Agent   │            │  Greeter Agent   │
+         │                  │            │                  │
+         │ • Current Weather│            │ • Welcomes       │
+         │ • Forecasts      │            │ • Farewells      │
+         │ • Open-Meteo API │            │ • Friendly Chat  │
+         └──────────────────┘            └──────────────────┘
+                    │                                │
+                    ▼                                ▼
+         ┌──────────────────┐            ┌──────────────────┐
+         │    RAG Agent     │            │ Academic Agents  │
+         │                  │            │                  │
+         │ • Corpus Mgmt    │            │ • WebSearch      │
+         │ • Doc Upload     │            │   (via wrapper)  │
+         │ • Semantic Search│            │ • NewResearch    │
+         │ • Vertex AI RAG  │            │   (via wrapper)  │
+         └──────────────────┘            └──────────────────┘
+                    │                                │
+                    ▼                                ▼
+         ┌──────────────────┐            ┌──────────────────┐
+         │  Cloud Storage   │            │   External APIs  │
+         │  & Firestore     │            │  (Google Search) │
+         └──────────────────┘            └──────────────────┘
 ```
 
 ## Sub-Agent Capabilities
